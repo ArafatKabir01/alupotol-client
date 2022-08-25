@@ -1,18 +1,24 @@
 import React from 'react';
 
 const Product = (product) => {
-    const {img , name} = product.product
+    const {img , name , price , quantity , date, supplyer, meter} = product.product
     console.log(product)
     return (
         <div className=''>
             <div className=' '>
                 <div class="card card-compact w-80 bg-base-100 shadow-xl ">
-                    <figure><img src={img} alt="Shoes" /></figure>
+                    <figure><img className='w-80' src={img} alt="Shoes" /></figure>
                     <div class="card-body">
                         <h2 class="card-title">{name}</h2>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
+                        <ol className=''>
+                            <li className='font-bold'>Price : {price}Tk</li>
+                            <li className='font-bold'>Quantity : {quantity}{meter}</li>
+                            <li className='font-bold'>Supplyer Name : {supplyer}</li>
+                            <li className='font-bold'>EXP Date : {date}</li>
+                            
+                        </ol>
                         <div class="card-actions justify-end">
-                            <button class="btn btn-primary">Buy Now</button>
+                            <button class="btn btn-primary ">Stock Update</button>
                         </div>
                     </div>
                 </div>
