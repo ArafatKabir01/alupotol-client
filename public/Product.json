@@ -1,0 +1,59 @@
+[
+    {
+      "id": "124e13b9-2d54-4b2f-a74d-a77b362d6ead",
+      "name": "Eye Exam For Glasses",
+      "img": "https://i.ibb.co/zRb6w20/service1.jpg",
+      "price": 400,
+      "text": "What can you expect during an Eye Exam for Glasses at Advanced Eye Clinic?"
+    },
+    {
+      "id": "13cbc7ed-a61b-4883-9d42-82d7d8642b86",
+      "name": "Eye Exam For Contact Lenses",
+      "img": "https://i.ibb.co/3fCMHHz/service2.webp",
+      "price": 450,
+      "text": "There is a HUGE difference between an eye exam for glasses and an eye exam for contact lenses."
+    },
+    {
+      "id": "307f166f-1d04-4573-bc37-2f461ea9d4f7",
+      "name": "Medical Diabetic Eye Exam",
+      "price": 500,
+      "img": "https://i.ibb.co/0ybSzkd/service3.jpg",
+      "text": "An annual eye exam for patients with Diabetes."
+    },
+    {
+        "id": "124e13b9-2d54-4b2f-a74d-a77b362d6ead",
+        "name": "Eye Exam For Glasses",
+        "img": "https://i.ibb.co/zRb6w20/service1.jpg",
+        "price": 400,
+        "text": "What can you expect during an Eye Exam for Glasses at Advanced Eye Clinic?"
+      },
+      {
+        "id": "13cbc7ed-a61b-4883-9d42-82d7d8642b86",
+        "name": "Eye Exam For Contact Lenses",
+        "img": "https://i.ibb.co/3fCMHHz/service2.webp",
+        "price": 450,
+        "text": "There is a HUGE difference between an eye exam for glasses and an eye exam for contact lenses."
+      },
+      {
+        "id": "307f166f-1d04-4573-bc37-2f461ea9d4f7",
+        "name": "Medical Diabetic Eye Exam",
+        "price": 500,
+        "img": "https://i.ibb.co/0ybSzkd/service3.jpg",
+        "text": "An annual eye exam for patients with Diabetes."
+      }
+      ,
+      {
+        "id": "13cbc7ed-a61b-4883-9d42-82d7d8642b86",
+        "name": "Eye Exam For Contact Lenses",
+        "img": "https://i.ibb.co/3fCMHHz/service2.webp",
+        "price": 450,
+        "text": "There is a HUGE difference between an eye exam for glasses and an eye exam for contact lenses."
+      },
+      {
+        "id": "307f166f-1d04-4573-bc37-2f461ea9d4f7",
+        "name": "Medical Diabetic Eye Exam",
+        "price": 500,
+        "img": "https://i.ibb.co/0ybSzkd/service3.jpg",
+        "text": "An annual eye exam for patients with Diabetes."
+      }
+]
