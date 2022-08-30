@@ -1,79 +1,44 @@
 [
     {
-      "id": "124e13b9-2d54-4b2f-a74d-a77b362d6ead",
-      "name": "Malta",
+      
+      "title": "Our Services",
       "img": "https://chaldn.com/_mpimage/malta-special-offer-50-gm-2-kg?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D85997&q=low&v=1&m=400&webp=1",
-      "price": 200,
-      "quantity": "450",
-      "supplyer" : "Bd-Malta",
-      "date" : "23/10/2022",
-      "meter" : "kg"
+      "text" : "We provide Our services in the whole world",
+      "details" : ""
+      
     },
     {
-      "id": "124e13b9-2d54-4b2f-a74d-a77b362d6ead",
-      "name": "Dalim",
-      "img": "https://chaldn.com/_mpimage/dalim-pomegranate-2-pcs?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D28589&q=low&v=1&m=400&webp=1",
-      "price": 350,
-      "quantity": "550",
-      "supplyer" : "Bd-Fruits",
-      "date" : "23/10/2022",
-      "meter" : "kg"
+      
+      "title": "Our Services",
+      "img": "https://chaldn.com/_mpimage/malta-special-offer-50-gm-2-kg?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D85997&q=low&v=1&m=400&webp=1",
+      "text" : "We provide Our services in the whole world",
+      "details" : ""
+      
     },
     {
-      "id": "124e13b9-2d54-4b2f-a74d-a77b362d6ead",
-      "name": "Tomato",
-      "img": "https://chaldn.com/_mpimage/red-tomato-25-gm-500-gm?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D64361&q=low&v=1&m=400&webp=1",
-      "price": 120,
-      "quantity": "1050",
-      "supplyer" : "Bd-Malta",
-      "date" : "23/10/2022",
-      "meter":"kg"
+      
+      "title": "Our Services",
+      "img": "https://chaldn.com/_mpimage/malta-special-offer-50-gm-2-kg?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D85997&q=low&v=1&m=400&webp=1",
+      "text" : "We provide Our services in the whole world",
+      "details" : ""
+      
     },
     {
-      "id": "124e13b9-2d54-4b2f-a74d-a77b362d6ead",
-      "name": "Bagda Chingri",
-      "img": "https://chaldn.com/_mpimage/bagda-chingri-shrimp-25-30-pcs-30-gm-500-gm?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D103452&q=best&v=1&m=400&webp=1",
-      "price": 600,
-      "quantity": "450",
-      "supplyer" : "Bd-Fish",
-      "date" : "23/10/2022",
-      "meter":"kg"
+      
+      "title": "Our Services",
+      "img": "https://chaldn.com/_mpimage/malta-special-offer-50-gm-2-kg?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D85997&q=low&v=1&m=400&webp=1",
+      "text" : "We provide Our services in the whole world",
+      "details" : ""
+      
     },
     {
-      "id": "124e13b9-2d54-4b2f-a74d-a77b362d6ead",
-      "name": "Malta",
-      "img": "https://chaldn.com/_mpimage/ag-food-vegetable-samosa-10-pcs-400-gm?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D88093&q=best&v=1&m=400&webp=1",
-      "price": 200,
-      "quantity": "450",
-      "supplyer" : "Bd-Malta",
-      "date" : "23/10/2022"
-    },
-    {
-      "id": "124e13b9-2d54-4b2f-a74d-a77b362d6ead",
-      "name": "Malta",
-      "img": "https://chaldn.com/_mpimage/lettuce-leaves-10-gm-100-gm?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D28797&q=low&v=1&m=400&webp=1",
-      "price": 200,
-      "quantity": "450",
-      "supplyer" : "Bd-Malta",
-      "date" : "23/10/2022"
-    },
-    {
-      "id": "124e13b9-2d54-4b2f-a74d-a77b362d6ead",
-      "name": "Malta",
-      "img": "https://chaldn.com/_mpimage/komola-orange-imported-50-gm-1-kg?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D64292&q=low&v=1&m=400&webp=1",
-      "price": 200,
-      "quantity": "450",
-      "supplyer" : "Bd-Malta",
-      "date" : "23/10/2022"
-    },
-    {
-      "id": "124e13b9-2d54-4b2f-a74d-a77b362d6ead",
-      "name": "Malta",
-      "img": "https://chaldn.com/_mpimage/kazi-farms-kitchen-vegetable-spring-roll-10-pcs-400-gm?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D108265&q=best&v=1&m=400&webp=1",
-      "price": 200,
-      "quantity": "450",
-      "supplyer" : "Bd-Malta",
-      "date" : "23/10/2022"
+      
+      "title": "Our Services",
+      "img": "https://chaldn.com/_mpimage/malta-special-offer-50-gm-2-kg?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D85997&q=low&v=1&m=400&webp=1",
+      "text" : "We provide Our services in the whole world",
+      "details" : ""
+      
     }
+    
     
 ]
