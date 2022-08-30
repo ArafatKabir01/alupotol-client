@@ -9,12 +9,18 @@ const Blogs = () => {
         .then(data => setBlogs(data))
     },[])
     return (
-        <div className='container m-auto flex flex-wrap  justify-center gap-8'>
+        <div className='container m-auto '>
+            <h2 className='text-5xl container mb-8 mt-32'>Featured Blogs</h2>
+            <div className='container m-auto flex flex-wrap mb-64  justify-center gap-8'>
+            
            
             {
                 blogs.map(blog => <Blog key={blog._id} blog={blog}></Blog>)
             }
+            
         </div>
+        </div>
+        
     );
 };
 

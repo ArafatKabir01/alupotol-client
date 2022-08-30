@@ -5,6 +5,7 @@ import Blogs from "./Pages/Blogs/Blogs";
 import Home from "./Pages/Home/Home";
 import Login from "./Pages/Login/Login";
 import ManageInventory from "./Pages/ManageInventory/ManageInventory";
+import RequireAuth from "./Pages/RequireAuth/RequireAuth";
 
 
 import Footer from "./Pages/Shared/Header/Footer";
@@ -23,10 +24,14 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/blog" element={<Blogs />} />
         <Route path="*" element={<NotFoundPage />} />
-        <Route path="/product/:id" element={<SingleProduct />} />
+        <Route path="/product/:id" element={<RequireAuth>
+          <SingleProduct />
+        </RequireAuth>} />
         
         
-        <Route path="inventory" element={<ManageInventory />} />
+        <Route path="inventory" element={<RequireAuth>
+          <ManageInventory />
+        </RequireAuth>} />
         <Route path="allProduct" element={<AllProduct />} />
         <Route path="login" element={<Login />} />
         <Route path="signup" element={<Signup />} />

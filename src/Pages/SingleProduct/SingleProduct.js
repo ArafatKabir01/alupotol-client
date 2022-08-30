@@ -6,7 +6,7 @@ import { useForm } from "react-hook-form";
 const SingleProduct = () => {
     let { id } = useParams()
     console.log(id)
-    const [product, setProduct] = useState({})
+    const [product, setProduct] = useState([])
     useEffect(() => {
         fetch(`http://localhost:5000/product/${id}`)
             .then(res => res.json())
@@ -23,8 +23,30 @@ const SingleProduct = () => {
 
         } )
         .then(res => res.json())
-        .then(data => console.log(data))
+        .then(data => {
+            window.location.reload()
+
+        })
     };
+
+    const hadleDelivered = (quantity , id) => {
+        const newQuantity = parseFloat(quantity) - 1;
+        console.log(newQuantity)
+            const url1 = `http://localhost:5000/deliveredproduct/${id}`
+            fetch(url1,{
+                method:'PUT',
+                headers:{'content-type':'application/json'},
+                body: JSON.stringify({newQuantity})
+    
+            })
+            .then(res => res.json())
+            .then(result => {
+                console.log(product);
+              
+                window.location.reload()
+                
+            });
+        };
 
 
     return (
@@ -43,7 +65,7 @@ const SingleProduct = () => {
 
                             </ol>
                             <div className='flex items-center gap-4'>
-                                <button class="btn btn-primary mt-4">Delivered</button>
+                                <button onClick={()=>hadleDelivered(product.quantity , product._id)} class="btn btn-primary mt-4">Delivered</button>
                                 <form onSubmit={handleSubmit(onSubmit)}>
                                     <div class="form-control">
                                         <div class="input-group">
