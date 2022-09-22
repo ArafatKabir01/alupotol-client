@@ -6,13 +6,13 @@ const Blog = (blog) => {
     return (
         <div data-theme = "autumn" className=''>
              
-            <div class="card h-80 w-96 bg-base-100 shadow-xl image-full">
+            <div className="card h-80 w-96 bg-base-100 shadow-xl image-full">
                 <figure className='transition duration-0 hover:duration-150 transition duration-700 ease-in-out'><img  src={img} alt="Shoes" /></figure>
-                <div class="card-body text-green-900">
-                    <h2 class="card-title text-white  text-5xl">{title}</h2>
+                <div className="card-body text-green-900">
+                    <h2 className="card-title text-white  text-5xl">{title}</h2>
                     <p className='text-white'>{text}</p>
-                    <div class="card-actions justify-end">
-                        <button class="btn btn-primary ">See Details</button>
+                    <div className="card-actions justify-end">
+                        <button className="btn btn-primary ">See Details</button>
                     </div>
                 </div>
             </div>

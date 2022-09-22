@@ -26,15 +26,6 @@ const AllProduct = () => {
 
         }
     }
-    useEffect(()=>{
-        console.log('ok')
-        fetch("http://localhost:5000/allProducts")
-        .then(res => res.json())
-        .then(data => {
-            const match = data.filter(d => d.title.includes(seacrchText))
-            setSearchREsult(match)
-        })
-    },[seacrchText])
     const handleSearch = event =>{
         setSearchText(event.target.value)
     }
@@ -45,25 +36,20 @@ const AllProduct = () => {
             <br />
             <br />
             <div>
-                <div class="overflow-x-auto w-full">
-                    <table class="table w-full">
-                        <div class="overflow-x-auto w-full">
-                            <table class="table w-full">
+                <div className="overflow-x-auto w-full">
+                    <table className="table w-full">
+                        <div className="overflow-x-auto w-full">
+                            <table className="table w-full">
                                 <thead>
-                                    <tr>
-                                        <th>
-                                            <label>
-                                                <input type="checkbox" class="checkbox" />
-                                            </label>
-                                        </th>
+                                    <tr>  
                                         <th>Name</th>
                                         <th>Quantity</th>
                                         <th>Price</th>
-                                        <th><div class="form-control">
-                                            <div class="input-group">
-                                                <input onChange={handleSearch} type="text" placeholder="Search…" class="input input-bordered" />
-                                                <button class="btn btn-square">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+                                        <th><div className="form-control">
+                                            <div className="input-group">
+                                                <input onChange={handleSearch} type="text" placeholder="Search…" className="input input-bordered" />
+                                                <button className="btn btn-square">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
                                                 </button>
                                             </div>
                                         </div></th>
@@ -72,41 +58,45 @@ const AllProduct = () => {
                                 </thead>
 
                                 {
-                                    products.map(product => <>
+                                    products.filter(value =>{
+                                        if(seacrchResult === "" ){
+                                            return value;
+                                        }else if(value.name.toLowerCase().includes(seacrchText.toLowerCase())){
+                                            return value 
+                                            
+                                        }
+                                              
+                                    }).map(v => {
+                                    
+                                    return (<>
                                         <tbody>
                                             <tr>
-                                                <th>
-                                                    <label>
-                                                        <input type="checkbox" class="checkbox" />
-                                                    </label>
-                                                </th>
+                                                
                                                 <td>
-                                                    <div class="flex items-center space-x-3">
-                                                        <div class="avatar">
-                                                            <div class="mask mask-squircle w-12 h-12">
-                                                                <img src={product.img} alt="Avatar Tailwind CSS Component" />
+                                                    <div className="flex items-center space-x-3">
+                                                        <div className="avatar">
+                                                            <div className="mask mask-squircle w-12 h-12">
+                                                                <img src={v.img} alt="Avatar Tailwind CSS Component" />
                                                             </div>
                                                         </div>
                                                         <div>
-                                                            <div class="font-bold">{product.name}</div>
-                                                            <div class="text-sm opacity-50">{product.supplyer}</div>
+                                                            <div className="font-bold">{v.name}</div>
+                                                            <div className="text-sm opacity-50">{v.supplyer}</div>
                                                         </div>
                                                     </div>
                                                 </td>
                                                 <td>
-                                                    {product.quantity}
+                                                    {v.quantity}
 
                                                 </td>
-                                                <td>{product.price}$</td>
+                                                <td>{v.price}$</td>
                                                 <th>
-                                                    <button onClick={() => handleDelete(product._id)} class="btn btn-ghost btn-xs">Delete</button>
+                                                    <button onClick={() => handleDelete(v._id)} className="btn btn-ghost btn-xs">Delete</button>
                                                 </th>
                                             </tr>
                                         </tbody>
                                     </>
-
-                                    )
-                                }
+                                    )})}
 
 
 

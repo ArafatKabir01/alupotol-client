@@ -21,7 +21,7 @@ const Products = () => {
                 }
             </div>
             
-            <button class="btn btn-xs float-right	me-5 mt-4">See All</button>
+            <button className="btn btn-xs float-right	me-5 mt-4">See All</button>
             <br/>
             <br/>
             <br/>

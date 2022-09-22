@@ -18,7 +18,7 @@ const Product = (product) => {
                         <h2 className="card-title text-rose-800">{name}</h2>
                         <ol className=''>
                             <li className='font-bold'>Price : {price}Tk</li>
-                            <li className='font-bold'>Quantity : {quantity}{meter}</li>
+                            <li className='font-bold'>Quantity : {quantity == 0 ?  <span className='text-red-800'>Stock Out</span> : quantity}{quantity ? meter : <></>}</li>
                             <li className='font-bold'>Supplier Name : {supplyer}</li>
                             <li className='font-bold'>EXP Date : {date}</li>
                             
