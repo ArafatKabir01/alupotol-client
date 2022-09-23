@@ -10,9 +10,9 @@ const Product = (product) => {
 
     }
     return (
-        <div data-theme = "autumn" className=''>
+        <div  className='mt-4 mb-4'>
             <div className=' border-solid border-2 rounded-md   '>
-                <div className="card card-compact  w-80 bg-base-100 shadow-xl ">
+                <div className="card card-compact  w-80  shadow-xl ">
                     <figure><img className='w-80' src={img} alt="Shoes" /></figure>
                     <div className="card-body">
                         <h2 className="card-title text-rose-800">{name}</h2>

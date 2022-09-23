@@ -7,7 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const ManageInventory = () => {
     const navigate = useNavigate()
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const { register, handleSubmit, watch,reset, formState: { errors } } = useForm();
     const onSubmit = data => {
 
         fetch('http://localhost:5000/addProduct',{
@@ -30,7 +30,7 @@ const ManageInventory = () => {
                 draggable: true,
                 progress: undefined,
                 });
-                document.getElementById("form").reset();
+                reset()
 
         })
     }
@@ -43,7 +43,7 @@ const ManageInventory = () => {
                             <div className="hero-content flex-col lg:flex-row-reverse">
                                 <div className="card flex-shrink-0 w-full  max-w-sm shadow-2xl bg-base-100">
                                     <div className="card-body">
-                                        <div className="form-control w-80 ">
+                                        <div className="form-control w-72 md:w-72 lg:w-80 ">
                                             <label className="label">
                                                 <span className="label-text">Product Name</span>
                                             </label>
@@ -78,8 +78,6 @@ const ManageInventory = () => {
                                 </div>
                             </div>
                         </div>
-
-                        
                     </form>
                 </div>
                 <ToastContainer

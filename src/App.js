@@ -12,6 +12,7 @@ import Footer from "./Pages/Shared/Header/Footer";
 import Navbar from "./Pages/Shared/Header/Navbar";
 import Signup from "./Pages/Signup/Signup";
 import SingleProduct from "./Pages/SingleProduct/SingleProduct";
+import UpdateProduct from "./Pages/UpdateProduct/UpdateProduct";
 
 
 function App() {
@@ -26,6 +27,9 @@ function App() {
         <Route path="*" element={<NotFoundPage />} />
         <Route path="/product/:id" element={<RequireAuth>
           <SingleProduct />
+        </RequireAuth>} />
+        <Route path="/product/update/:id" element={<RequireAuth>
+          <UpdateProduct />
         </RequireAuth>} />
         
         

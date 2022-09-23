@@ -10,14 +10,14 @@ const Banner = () => {
         <br/> <br/>
     <div  className="carousel   w-full">
                 <div id="slide1" className="carousel-item relative w-full">
-                    <img src="https://img.freepik.com/free-photo/assortment-vegetables-wooden-box_144627-45292.jpg?w=1380&t=st=1661870847~exp=1661871447~hmac=0f077cd20938369d6fd66efb0623f9649ddbe61d418358d669f93e4b73995328" className="w-full" />
+                    <img src="https://img.freepik.com/free-photo/assortment-vegetables-wooden-box_144627-45292.jpg?w=1380&t=st=1661870847~exp=1661871447~hmac=0f077cd20938369d6fd66efb0623f9649ddbe61d418358d669f93e4b73995328" className="w-screen" />
                     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                         <a href="#slide3" className="btn btn-circle">❮</a>
                         <a href="#slide2" className="btn btn-circle">❯</a>
                     </div>
                 </div>
                 <div id="slide2" className="carousel-item relative w-full">
-                    <img src="https://img.freepik.com/premium-photo/composition-with-vegetables-fruits-wicker-basket-isolated_135427-2733.jpg?w=1380" className="w-full" />
+                    <img src="https://img.freepik.com/premium-photo/composition-with-vegetables-fruits-wicker-basket-isolated_135427-2733.jpg?w=1380" className="w-screen" />
                     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                         <a href="#slide1" className="btn btn-circle">❮</a>
                         <a href="#slide3" className="btn btn-circle">❯</a>

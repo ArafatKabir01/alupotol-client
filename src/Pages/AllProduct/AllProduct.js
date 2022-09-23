@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import Product from '../Home/Product';
+
+import {useNavigate } from 'react-router-dom';
 
 const AllProduct = () => {
     const [products, setProducts] = useState([])
     const [seacrchText , setSearchText] = useState('')
-    const [seacrchResult , setSearchREsult] = useState([])
+    const navigate = useNavigate()
     useEffect(() => {
         fetch('http://localhost:5000/allProducts')
             .then(res => res.json())
@@ -26,21 +27,28 @@ const AllProduct = () => {
 
         }
     }
+   
+
+   const handleUpdate = id =>{
+    navigate(`/product/update/${id}`)
+
+        }
+
     const handleSearch = event =>{
         setSearchText(event.target.value)
     }
     return (
-        <div data-theme="autumn" className='container m-auto'>
+        <div data-theme="autumn" className='container m-auto w-96 md:w-full lg:w-full'>
             <br />
             <br />
             <br />
             <br />
             <div>
-                <div className="overflow-x-auto w-full">
-                    <table className="table w-full">
-                        <div className="overflow-x-auto w-full">
-                            <table className="table w-full">
-                                <thead>
+                <div className="overflow-x-auto w-full ">
+                    <table className="table w-full ">
+                        <div className="overflow-x-auto ">
+                            <table className="table w-full  ">
+                                <thead >
                                     <tr>  
                                         <th>Name</th>
                                         <th>Quantity</th>
@@ -59,7 +67,7 @@ const AllProduct = () => {
 
                                 {
                                     products.filter(value =>{
-                                        if(seacrchResult === "" ){
+                                        if(seacrchText === "" ){
                                             return value;
                                         }else if(value.name.toLowerCase().includes(seacrchText.toLowerCase())){
                                             return value 
@@ -73,7 +81,7 @@ const AllProduct = () => {
                                             <tr>
                                                 
                                                 <td>
-                                                    <div className="flex items-center space-x-3">
+                                                    <div className="flex items-center  space-x-3">
                                                         <div className="avatar">
                                                             <div className="mask mask-squircle w-12 h-12">
                                                                 <img src={v.img} alt="Avatar Tailwind CSS Component" />
@@ -92,7 +100,10 @@ const AllProduct = () => {
                                                 <td>{v.price}$</td>
                                                 <th>
                                                     <button onClick={() => handleDelete(v._id)} className="btn btn-ghost btn-xs">Delete</button>
+                                                
+                                                        <label onClick={()=>handleUpdate(v._id)} htmlFor="my-modal-6" className="btn btn-ghost btn-xs">Update</label>                                               
                                                 </th>
+                                                
                                             </tr>
                                         </tbody>
                                     </>
