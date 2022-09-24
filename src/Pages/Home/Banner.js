@@ -6,7 +6,7 @@ const Banner = () => {
         <div className=' m-auto' data-theme="" >
             <div className="hero  ">
   <div className="hero-content  text-center">
-    <div className="w-96 md:w-9/12 lg:w-screen  ">
+    <div className="w-100 md:w-9/12 lg:w-screen  ">
         <br/> <br/>
     <div  className="carousel   w-full">
                 <div id="slide1" className="carousel-item relative w-full">

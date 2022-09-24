@@ -4,7 +4,7 @@ import Blog from './Blog';
 const Blogs = () => {
     const [blogs , setBlogs] = useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000/allBlog')
+        fetch('https://rocky-oasis-35622.herokuapp.com/allBlog')
         .then(res => res.json())
         .then(data => setBlogs(data))
     },[])

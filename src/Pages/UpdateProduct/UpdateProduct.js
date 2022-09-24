@@ -16,7 +16,7 @@ const UpdateProduct = () =>{
     let {id} = useParams()
     useEffect(()=>{
         const fetchData = async () => {
-            const data = await  fetch(`http://localhost:5000/product/${id}`)
+            const data = await  fetch(`https://rocky-oasis-35622.herokuapp.com/product/${id}`)
             const json = await data.json();
             setUpdateProduct(json)
            
@@ -31,7 +31,7 @@ const UpdateProduct = () =>{
     const onSubmit = data => {
         console.log(data)
 
-        fetch(`http://localhost:5000/updateProduct/${id}`,{
+        fetch(`https://rocky-oasis-35622.herokuapp.com/updateProduct/${id}`,{
             method : 'PUT',
             headers : {
                 'content-type' : 'application/json'
@@ -71,27 +71,27 @@ const UpdateProduct = () =>{
                                 <label className="label">
                                     <span className="label-text">Product Name</span>
                                 </label>
-                                <input defaultValue={updateProduct.name} name='name' {...register("name", { required: true })} type="text" className="input input-bordered" />
+                                <input defaultValue={updateProduct?.name} name='name' {...register("name", { required: true })} type="text" className="input input-bordered" />
                                 <label className="label">
                                     <span className="label-text">Price</span>
                                 </label>
-                                <input defaultValue={updateProduct.price} {...register("price", { required: true })} type="text" className="input input-bordered" />
+                                <input defaultValue={updateProduct?.price} {...register("price", { required: true })} type="text" className="input input-bordered" />
                                 <label className="label">
                                     <span className="label-text">Quantity</span>
                                 </label>
-                                <input defaultValue={updateProduct.quantity} {...register("quantity", { required: true })} type="text" className="input input-bordered" />
+                                <input defaultValue={updateProduct?.quantity} {...register("quantity", { required: true })} type="text" className="input input-bordered" />
                                 <label className="label">
                                     <span className="label-text">Supplier Name</span>
                                 </label>
-                                <input defaultValue={updateProduct.supplyer} {...register("supplyre", { required: true })} type="text" className="input input-bordered" />
+                                <input defaultValue={updateProduct?.supplyer} {...register("supplyre", { required: true })} type="text" className="input input-bordered" />
                                 <label className="label">
                                     <span className="label-text">Img URL</span>
                                 </label>
-                                <input defaultValue={updateProduct.img} {...register("img", { required: true })} type="text" className="input input-bordered" />
+                                <input defaultValue={updateProduct?.img} {...register("img", { required: true })} type="text" className="input input-bordered" />
                                 <label className="label">
                                     <span className="label-text">EXP Date</span>
                                 </label>
-                                <input defaultValue={updateProduct.date} {...register("date", { required: true })} type="text" className="input input-bordered" />
+                                <input defaultValue={updateProduct?.date} {...register("date", { required: true })} type="text" className="input input-bordered" />
                                 
                             </div>
                             

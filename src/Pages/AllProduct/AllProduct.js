@@ -7,14 +7,14 @@ const AllProduct = () => {
     const [seacrchText , setSearchText] = useState('')
     const navigate = useNavigate()
     useEffect(() => {
-        fetch('http://localhost:5000/allProducts')
+        fetch('https://rocky-oasis-35622.herokuapp.com/allProducts')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, []);
     const handleDelete = id => {
         const proceed = window.confirm('are you sure?')
         if (proceed) {
-            const url = `http://localhost:5000/product/${id}`
+            const url = `https://rocky-oasis-35622.herokuapp.com/product/${id}`
             fetch(url, {
                 method: "DELETE"
             })
@@ -38,7 +38,7 @@ const AllProduct = () => {
         setSearchText(event.target.value)
     }
     return (
-        <div data-theme="autumn" className='container m-auto w-96 md:w-full lg:w-full'>
+        <div data-theme="autumn" className='container z-1 m-auto w-96 md:w-full lg:w-full'>
             <br />
             <br />
             <br />
@@ -48,8 +48,9 @@ const AllProduct = () => {
                     <table className="table w-full ">
                         <div className="overflow-x-auto ">
                             <table className="table w-full  ">
-                                <thead >
+                                <thead  className='md:z-0' >
                                     <tr>  
+                                        <th></th>
                                         <th>Name</th>
                                         <th>Quantity</th>
                                         <th>Price</th>
@@ -79,7 +80,7 @@ const AllProduct = () => {
                                     return (<>
                                         <tbody>
                                             <tr>
-                                                
+                                                <td></td>
                                                 <td>
                                                     <div className="flex items-center  space-x-3">
                                                         <div className="avatar">

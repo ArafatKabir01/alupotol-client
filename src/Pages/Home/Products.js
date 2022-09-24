@@ -4,12 +4,12 @@ import Product from './Product';
 const Products = () => {
     const [products, setproducts] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/allProducts')
+        fetch('https://rocky-oasis-35622.herokuapp.com/allProducts')
             .then(res => res.json())
             .then(data => setproducts(data))
     }, [])
     return (
-        <div dara-theme = "autumn" className='container m-auto'>
+        <div className='container m-auto'>
             <br/>
             <br/>
             <h2 className='text-center text-6xl text-lime-800 mt-5 mb-8	'>All Products</h2>

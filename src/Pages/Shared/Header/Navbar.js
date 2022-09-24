@@ -11,15 +11,15 @@ const Navbar = () => {
     }
     const [user, loading, error] = useAuthState(auth);
     return (
-        <div  className=''>
+        <div  className='z-20'>
             <div data-theme="autumn" className="navbar text-2xl z-10 bg-violet-200 bg-opacity-80	 rounded-sm absolute md:fixed lg:fixed top-0 left-0 right-0  px-6 m-auto  ">
                 <div className="navbar-start ">
-                    <div className="dropdown">
+                    <div className="dropdown ">
                         <label tabIndex="0" className="btn btn-ghost lg:hidden">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                         </label>
                         <ul tabIndex="0" className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 text-lime-800 rounded-box w-52">
-                            <li>
+                            <li className=''>
                                 < Link to="/">Home</ Link>
                                 
                                  <Link to='/blog'>Blog</Link>
@@ -28,12 +28,12 @@ const Navbar = () => {
                                 {user ? < Link to="allProduct">All Product</ Link> : <></>}
                                 
                                 {user ? <></> : <Link to='/login'>Login</Link>}
-                                {user ? <button onClick={logOut} className="btn btn-sm">Log Out</button> : <Link to='/signup'>SignUp</Link>}
+                                {user ? <button onClick={logOut} className="btn btn-sm text-white">Log Out</button> : <Link to='/signup'>SignUp</Link>}
 
                             </li>
                         </ul>
                     </div>
-                    <a className="  text-3xl font-bold text-rose-800 		">AluPotol</a>
+                    <a className="  text-3xl font-bold text-rose-800">AluPotol</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu text-lime-800 menu-horizontal font-bold p-0">
