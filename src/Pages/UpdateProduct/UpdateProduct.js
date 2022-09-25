@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { ToastContainer, toast } from 'react-toastify';
+import Loading from '../Shared/Loading/Loading';
 
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -24,9 +25,11 @@ const UpdateProduct = () =>{
     fetchData()
 },[])
  
-   
+  
     const { register, handleSubmit, watch,reset,resetField, formState: { errors } } = useForm();
-   
+    if(!updateProduct){
+        return <Loading></Loading>
+       }
 
     const onSubmit = data => {
         console.log(data)

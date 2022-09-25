@@ -2,9 +2,14 @@ import React from 'react';
 
 const Loading = () => {
     return (
-        <div>
-            <button className="btn loading">loading</button>
-        </div>
+        <div className="hero min-h-screen bg-base-200">
+  <div className="hero-content text-center">
+    <div className="max-w-md">
+    <button className="btn loading btn-ghost">loading</button>
+    </div>
+  </div>
+</div>
+        
     );
 };
 

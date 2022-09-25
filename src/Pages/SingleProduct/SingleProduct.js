@@ -28,11 +28,14 @@ const SingleProduct = () => {
         }
     }).then(res => res.json()));
    
+    
+    const { register, handleSubmit, watch, formState: { errors } } = useForm();
     if(isLoading){
         <Loading></Loading>
     }
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
-    
+    if(!products){
+        <Loading></Loading>
+    }
     const onSubmit = data => {
         if(data.quantity === ""){
             setError ("Please set your quantity")
@@ -130,7 +133,7 @@ const SingleProduct = () => {
                 <h2 className='text-center text-4xl text-lime-800 mt-5 mb-8	'>Products Need To Update Stock</h2>
       <Swiper
         slidesPerView={3}
-        spaceBetween={50}
+        spaceBetween={73}
         freeMode={true}
        
         modules={[FreeMode]}
