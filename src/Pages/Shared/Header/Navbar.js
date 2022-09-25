@@ -12,7 +12,7 @@ const Navbar = () => {
     const [user, loading, error] = useAuthState(auth);
     return (
         <div  className='z-20'>
-            <div data-theme="autumn" className="navbar text-2xl z-10 bg-violet-200 bg-opacity-80	 rounded-sm absolute md:fixed lg:fixed top-0 left-0 right-0  px-6 m-auto  ">
+            <div data-theme="autumn" className="navbar text-2xl z-10 bg-violet-200 bg-opacity-80	 rounded-sm  md:fixed lg:fixed top-0 left-0 right-0  px-6 m-auto  ">
                 <div className="navbar-start ">
                     <div className="dropdown ">
                         <label tabIndex="0" className="btn btn-ghost lg:hidden">

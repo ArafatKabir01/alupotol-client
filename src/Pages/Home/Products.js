@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Loading from '../Shared/Loading/Loading';
 import Product from './Product';
 
 const Products = () => {
@@ -8,14 +9,24 @@ const Products = () => {
             .then(res => res.json())
             .then(data => setproducts(data))
     }, [])
+    if(!products){
+        return <Loading></Loading>
+    }
     return (
-        <div className='container m-auto'>
+        <div className=' m-auto'>
             <br/>
             <br/>
-            <h2 className='text-center text-6xl text-lime-800 mt-5 mb-8	'>All Products</h2>
-            <hr className='border-lime-700'></hr>
+            
+            <div className='flex justify-evenly items-center '>
+            
+                <div data-aos="fade-right" data-aos-duration="1500" className='bg-red-700 h-2 w-80 ' ></div>
+                <div><h2 className='text-center text-4xl text-lime-800 block w-80 pb-4 font-bold'>ALL PRODUCTS</h2></div>
+                <div data-aos="fade-left" data-aos-duration="1500" className='bg-red-700 h-2 w-80 '></div>
+            </div>
+            
             <br/>
-            <div data-theme = "autumn" className='flex flex-wrap mt-8  justify-center gap-8'>
+            
+            <div className='flex flex-wrap mt-8  justify-center gap-8'>
                 {
                     products.map(product => <Product key={product._id} product={product}></Product>)
                 }

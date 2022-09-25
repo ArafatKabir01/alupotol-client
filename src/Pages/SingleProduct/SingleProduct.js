@@ -13,7 +13,7 @@ import "swiper/css/pagination";
 import "./SingleProduct.css";
 
 // import required modules
-import { FreeMode, Pagination } from "swiper";
+import { FreeMode } from "swiper";
 
 
 const SingleProduct = () => {
@@ -126,16 +126,14 @@ const SingleProduct = () => {
                         </div>
                     </div>
                 </div>
-                <div className='hidden md:hidden lg:block mt-8'>  
+                <div className=' mt-8'>  
                 <h2 className='text-center text-4xl text-lime-800 mt-5 mb-8	'>Products Need To Update Stock</h2>
       <Swiper
-        slidesPerView={4}
-        spaceBetween={30}
+        slidesPerView={3}
+        spaceBetween={50}
         freeMode={true}
-        pagination={{
-          clickable: true,
-        }}
-        modules={[FreeMode, Pagination]}
+       
+        modules={[FreeMode]}
         className="QSwiper"
       >
         {products.filter(value =>{
@@ -145,11 +143,12 @@ const SingleProduct = () => {
                                 }).map( value => {
                               
                               return <SwiperSlide ><div className=' border-solid border-2 rounded-md'>
-                                <div  data-theme = "autumn" className="card card-compact w-32 md:w-48 lg:w-72 shadow-xl ">
-                                    <figure><img className='w-80' src={value.img} alt="Shoes" /></figure>
+                                <span class="animate-ping absolute  h-full w-2 rounded bg-rose-800 opacity-75"></span>
+                                <div  data-theme = "autumn" className="card card-compact w-32 md:w-48 lg:w-72 h-56 md:h-48 lg:h-full shadow-xl ">
+                                    <figure><img className='w-full' src={value.img} alt="Shoes" /></figure>
                                     <div className="card-body">
                                 <h2 className="card-title text-rose-800">{value.name}</h2>
-                                <ol className=''>
+                                <ol className='hidden md:block lg:block'>
                                     <li className='font-bold'>Price : {value.price}Tk</li>
                                     <li className='font-bold'>Quantity : {value.quantity == 0 ?  <span className='text-red-800'>Stock Out</span> : value.quantity}{value.quantity ? value.meter : <></>}</li>
                                     <li className='font-bold'>Supplier Name : {value.supplyer}</li>
@@ -157,10 +156,13 @@ const SingleProduct = () => {
                                     
                                 </ol>
                                 <div className="card-actions justify-end">
-                                    <button onClick={()=> navigateToProductInfo(value._id)} className="btn btn-primary btn-sm">Stock Update</button>
+                                    <button onClick={()=> navigateToProductInfo(value._id)} className="btn btn-primary btn-sm">Update</button>
                                 </div>
+                                
                     </div>
+                    
                 </div>
+               
             </div>
             </SwiperSlide>})}
       </Swiper>

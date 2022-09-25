@@ -6,8 +6,10 @@ const AboutUs = () => {
             
             <div className="hero min-h-screen bg-base-200">
                 <div className="hero-content flex-col lg:flex-row gap-8">
-                    <img src={img} className="w-96 md:w-96 lg:w-3/5 rounded-lg " />
-                    <div className='ms-32'>
+                    <img data-aos="fade-right"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine"  data-aos-duration="1500" src={img} className="w-96 md:w-96 lg:w-3/5 web-lg:w-3/5 rounded-lg " />
+                    <div data-aos="zoom-out-left "  data-aos-duration="2000" className='ms-32'>
                         <h1 className="text-5xl font-bold text-rose-800 ">About Us</h1>
                         <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
                         <button data-theme="autumn" className="btn btn-primary">See More</button>
