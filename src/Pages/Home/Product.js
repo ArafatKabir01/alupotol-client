@@ -14,7 +14,7 @@ const Product = (product) => {
             <div className=' border-solid border-2 rounded-md   '>
                 <div data-theme = "autumn"  className="card card-compact  w-80  shadow-xl ">
                     <figure><img className='w-80' src={img} alt="Shoes" /></figure>
-                    <div className="card-body">
+                    <div className="card-body h-56">
                         <h2 className="card-title text-rose-800">{name}</h2>
                         <ol className=''>
                             <li className='font-bold'>Price : {price}Tk</li>
@@ -28,8 +28,6 @@ const Product = (product) => {
                         </div>
                     </div>
                 </div>
-
-
             </div>
 
         </div>

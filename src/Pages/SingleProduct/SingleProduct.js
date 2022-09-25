@@ -147,11 +147,11 @@ const SingleProduct = () => {
                               
                               return <SwiperSlide ><div className=' border-solid border-2 rounded-md'>
                                 <span class="animate-ping absolute  h-full w-2 rounded bg-rose-800 opacity-75"></span>
-                                <div  data-theme = "autumn" className="card card-compact w-32 md:w-48 lg:w-72 h-56 md:h-48 lg:h-full shadow-xl ">
+                                <div  data-theme = "autumn" className="card card-compact w-32 md:w-48 lg:w-72 h-56 md:h-full lg:h-full shadow-xl ">
                                     <figure><img className='w-full' src={value.img} alt="Shoes" /></figure>
-                                    <div className="card-body">
+                                    <div className="card-body h-56 ">
                                 <h2 className="card-title text-rose-800">{value.name}</h2>
-                                <ol className='hidden md:block lg:block'>
+                                <ol className='hidden  md:block lg:block'>
                                     <li className='font-bold'>Price : {value.price}Tk</li>
                                     <li className='font-bold'>Quantity : {value.quantity == 0 ?  <span className='text-red-800'>Stock Out</span> : value.quantity}{value.quantity ? value.meter : <></>}</li>
                                     <li className='font-bold'>Supplier Name : {value.supplyer}</li>
