@@ -17,7 +17,7 @@ const UpdateProduct = () =>{
     let {id} = useParams()
     useEffect(()=>{
         const fetchData = async () => {
-            const data = await  fetch(`https://rocky-oasis-35622.herokuapp.com/product/${id}`)
+            const data = await  fetch(`https://warehouse-management-ukio.onrender.com/product/${id}`)
             const json = await data.json();
             setUpdateProduct(json)
            
@@ -34,7 +34,7 @@ const UpdateProduct = () =>{
     const onSubmit = data => {
         console.log(data)
 
-        fetch(`https://rocky-oasis-35622.herokuapp.com/updateProduct/${id}`,{
+        fetch(`https://warehouse-management-ukio.onrender.com/updateProduct/${id}`,{
             method : 'PUT',
             headers : {
                 'content-type' : 'application/json'

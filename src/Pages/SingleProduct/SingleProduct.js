@@ -21,7 +21,7 @@ const SingleProduct = () => {
     const [products, setProducts] = useState([])
     console.log(id)
     const [error, setError] = useState("")
-     const { data:allProducts, isLoading, refetch } =  useQuery('allProducts', () => fetch(`https://rocky-oasis-35622.herokuapp.com/product/${id}`, {
+     const { data:allProducts, isLoading, refetch } =  useQuery('allProducts', () => fetch(`https://warehouse-management-ukio.onrender.com/product/${id}`, {
         method: 'GET',
         headers:{
             'content-type' : 'application/json'
@@ -47,7 +47,7 @@ const SingleProduct = () => {
         } 
         else{
             
-            fetch(`https://rocky-oasis-35622.herokuapp.com/product/${id}`,{
+            fetch(`https://warehouse-management-ukio.onrender.com/product/${id}`,{
                 method : 'PUT',
                 headers : {
                     'content-type' : 'application/json'
@@ -70,7 +70,7 @@ const SingleProduct = () => {
         }else{
             const newQuantity = parseFloat(quantity) - 1;
         console.log(newQuantity)
-            const url1 = `https://rocky-oasis-35622.herokuapp.com/deliveredproduct/${id}`
+            const url1 = `https://warehouse-management-ukio.onrender.com/deliveredproduct/${id}`
             fetch(url1,{
                 method:'PUT',
                 headers:{'content-type':'application/json'},
@@ -94,7 +94,7 @@ const SingleProduct = () => {
             navigate(`/product/update/${id}`)
         }
         useEffect(() => {
-            fetch('https://rocky-oasis-35622.herokuapp.com/allProducts')
+            fetch('https://warehouse-management-ukio.onrender.com/allProducts')
                 .then(res => res.json())
                 .then(data => setProducts(data))
                 

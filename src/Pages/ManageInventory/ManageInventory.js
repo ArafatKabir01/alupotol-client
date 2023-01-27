@@ -10,7 +10,7 @@ const ManageInventory = () => {
     const { register, handleSubmit, watch,reset, formState: { errors } } = useForm();
     const onSubmit = data => {
 
-        fetch('https://rocky-oasis-35622.herokuapp.com/addProduct',{
+        fetch('https://warehouse-management-ukio.onrender.com/addProduct',{
             method : 'POST',
             headers : {
                 'content-type' : 'application/json'

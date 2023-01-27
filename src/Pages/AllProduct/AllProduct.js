@@ -7,14 +7,14 @@ const AllProduct = () => {
     const [seacrchText , setSearchText] = useState('')
     const navigate = useNavigate()
     useEffect(() => {
-        fetch('https://rocky-oasis-35622.herokuapp.com/allProducts')
+        fetch('https://warehouse-management-ukio.onrender.com/allProducts')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, []);
     const handleDelete = id => {
         const proceed = window.confirm('are you sure?')
         if (proceed) {
-            const url = `https://rocky-oasis-35622.herokuapp.com/product/${id}`
+            const url = `https://warehouse-management-ukio.onrender.com/product/${id}`
             fetch(url, {
                 method: "DELETE"
             })
